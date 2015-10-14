@@ -404,7 +404,7 @@ function readSmartCitySensors(){
             } varwind = data;
         });
         var lumen = parseInt(varlight);
-        if (lumen > 10000) {
+        if (lumen > 1000) {
             exec("echo 1 > /sys/class/gpio/gpio25/value", function (error, stdout, stderr) {
                 if (error !== null) {
                     console.log('Cannot turn on LED on 25: '+error);
